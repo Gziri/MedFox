@@ -1,9 +1,14 @@
-import React from 'react';
+import React from "react";
 
-const Navigation = () =>(
-<div className=''>
-<p>Navigation</p>
-</div>
-)
+import { useNavigate } from "react-router";
+
+const Navigation = () => {
+  const navigate = useNavigate();
+  return (
+    <div className="">
+      <p onClick={() => navigate("/")}>Navigation</p>
+    </div>
+  );
+};
 
 export default Navigation;
