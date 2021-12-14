@@ -6,8 +6,7 @@ import Services from "../sections/services.section";
 import Therapists from "../sections/therapists.section";
 
 const PatientPage = () => (
-  <div className="">
-    <p>Patient Page</p>
+  <div className="mt-10">
     <div className="text-green-600">
       <Intro/>
       <Therapists/>

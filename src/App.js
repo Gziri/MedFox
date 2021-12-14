@@ -7,8 +7,8 @@ import { Routes, Route } from "react-router";
 
 function App() {
   return (
-    <div className="bg-neutral-200 bg-opacity-40 h-screen w-screen flex flex-col justify-center items-center">
-      <Header className="" />
+    <div className="bg-neutral-200 bg-opacity-40 h-full w-screen flex flex-col">
+      <Header />
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
         <Route path="patient" element={<PatientPage />} />

@@ -1,9 +1,15 @@
-import React from 'react';
+import React from "react";
 
-const Logo = () =>(
-<div className=''>
-  Logo Here
-</div>
-)
+import { useNavigate } from "react-router";
+
+const Logo = () => {
+  const navigate = useNavigate();
+
+  return (
+    <div className="cursor-pointer">
+      <p onClick={() => navigate("/")}> Logo Here</p>
+    </div>
+  );
+};
 
 export default Logo;
