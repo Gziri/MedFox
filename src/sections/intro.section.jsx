@@ -1,9 +1,9 @@
 import React from "react";
 
 const Intro = () => (
-  <div className="mt-10 w-full justify-center flex">
-    <div className="w-9/12 bg-neutral-50 p-5 text-justify rounded-xl ">
-      <p className="text-slate-900">
+  <div className="mt-20 w-full justify-center flex">
+    <div className="w-9/12 bg-neutral-50 p-5 rounded-xl ">
+      <p className="text-slate-900 text-base text-justify">
         მედფოქსი ფიზიკური მედიცინისა და რეაბილიტაციის სპეციალისტების მიერ
         შექმნილი ინოვაციური სერვისია, რომელიც მიზნად ისახავს საზოგადოებას
         შესთავაზოს ნებისმიერ სივრცეში (სახლში, ოფისში, სასტუმროში ან კლინიკურ

@@ -1,17 +1,19 @@
 import React from "react";
-import Logo from "./logo.component";
+// import Logo from "./logo.component";
 import Navigation from "./navigation/navigation.component";
+
+import { ReactComponent as Logo } from "../../assets/logo.svg";
 
 const Header = () => {
   // const [navbarOpen, setNavbarOpen] = React.useState(false);
   return (
     <div
-      className=" w-full fixed top-0 left-0 flex flex-wrap items-center justify-between px-2 py-3 bg-blueGray-500 mb-3
+      className=" w-full fixed top-0 left-0  px-2 py-3 bg-blueGray-500 mb-3
     bg-neutral-200"
     >
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         {/* <div > */}
-        <Logo className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start" />
+        <Logo className="w-10 ml-10" />
         <Navigation />
         {/* </div> */}
       </div>
