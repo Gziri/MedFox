@@ -1,9 +1,9 @@
 import React from "react";
 
 const Footer = () => (
-    <div className="mt-28 align-center ">
+    <div className="mt-28 align-center shadow-reverse  ">
       <div
-        className="w-screen py-7 h-fit bg-neutral-200 flex flex-col text-center
+        className="w-screen py-7 h-fit bg-neutral-200 flex flex-col text-center align-middle
       text-zinc-800  gap-y-1"
       >
         <a href="tel:595285000" className="flex justify-center align-middle hover:text-orange-500" >
