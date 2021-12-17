@@ -6,87 +6,85 @@ import DATA from "./data";
 
 const Services = () => {
   const services = DATA.services.map((service) => {
-    if (service.side == "l") {
+    if (service.side === "l") {
       return (
-        <div className="flex align-middle">
-             <img
-          src="https://physiomobile.ca/wp-content/uploads/2016/03/Pageservice2.jpg"
-          alt="serviceImage"
-          className="w-6/12 rounded-xl"
-        />
         <div
-          className="flex flex-col justify-center 
-          px-24"
+          className="laptop:flex laptop:align-middle laptop:justify-center mb-5
+       "
+          key={service.key}
         >
-          <h1 className="text-center mb-20">
-            <p
-              className="text-5xl text-sky-500 underline underline-offset-3 
-              decoration-orange-200"
-            >
-              {service.name}
-            </p>
-          </h1>
-          <p className="text-gray-500 indent-5">
-            {ReactHtmlParser(service.description.main)}
-          </p>
-          <br />
-          <p className="font-bold text-gray-600">
-            {ReactHtmlParser(service.description.listTitle)}
-          </p>
-          <br />
-          <ul className="list-disc list-inside text-gray-800">
-            {ReactHtmlParser(service.description.list)}
-          </ul>
-          <br />
-          <p className="text-gray-500">
-            {ReactHtmlParser(service.description.last)}
-          </p>
+          <img
+            src="https://physiomobile.ca/wp-content/uploads/2016/03/Pageservice2.jpg"
+            alt="serviceImage"
+            className="h-96 w-full object-cover laptop:h-full laptop:w-6/12 rounded-xl"
+          />
+          <div className="laptop:pl-20 laptop:w-5/12 text-justify">
+            <h1 className="text-center my-5 laptop:mb-15">
+              <p className="text-2xl laptop:text-3xl text-sky-500">
+                {service.name}
+              </p>
+            </h1>
+            <span className="text-gray-500">
+              {ReactHtmlParser(service.description.main)}
+            </span>
+            <br />
+            <span className="font-bold text-gray-600">
+              {ReactHtmlParser(service.description.listTitle)}
+            </span>
+            <br />
+            <ul className="list-disc list-inside text-gray-800">
+              {ReactHtmlParser(service.description.list)}
+            </ul>
+            <br />
+            <span className="text-gray-500">
+              {ReactHtmlParser(service.description.last)}
+            </span>
+          </div>
         </div>
-     
-      </div>
+      );
+    } else {
+      return (
+        <div
+          className="flex flex-col-reverse  laptop:flex-row laptop:align-middle laptop:justify-center mb-5
+        "
+          key={service.key}
+        >
+          <div className="laptop:pr-20 laptop:w-5/12 text-justify">
+            <h1 className="text-center my-5 laptop:mb-15">
+              <p className="text-2xl text-sky-500">{service.name}</p>
+            </h1>
+            <span className="text-gray-500">
+              {ReactHtmlParser(service.description.main)}
+            </span>
+            <br />
+            <span className="font-bold text-gray-600">
+              {ReactHtmlParser(service.description.listTitle)}
+            </span>
+            <br />
+            <ul className="list-disc list-inside text-gray-800">
+              {ReactHtmlParser(service.description.list)}
+            </ul>
+            <br />
+            <span className="text-gray-500">
+              {ReactHtmlParser(service.description.last)}
+            </span>
+          </div>
+          <img
+            src="https://physiomobile.ca/wp-content/uploads/2016/03/Pageservice2.jpg"
+            alt="serviceImage"
+            className="h-96 w-full object-cover laptop:h-full laptop:w-6/12 rounded-xl"
+          />
+        </div>
       );
     }
-    return (
-      <div className="flex align-middle">
-        <div
-          className="flex flex-col justify-center 
-          px-24"
-        >
-          <h1 className="text-center mb-20">
-            <p
-              className="text-5xl text-sky-500 underline underline-offset-3 
-              decoration-orange-200"
-            >
-              {service.name}
-            </p>
-          </h1>
-          <p className="text-gray-500 indent-5">
-            {ReactHtmlParser(service.description.main)}
-          </p>
-          <br />
-          <p className="font-bold text-gray-600">
-            {ReactHtmlParser(service.description.listTitle)}
-          </p>
-          <br />
-          <ul className="list-disc list-inside text-gray-800">
-            {ReactHtmlParser(service.description.list)}
-          </ul>
-          <br />
-          <p className="text-gray-500">
-            {ReactHtmlParser(service.description.last)}
-          </p>
-        </div>
-        <img
-          src="https://physiomobile.ca/wp-content/uploads/2016/03/Pageservice2.jpg"
-          alt="serviceImage"
-          className="w-6/12 rounded-xl"
-        />
-      </div>
-    );
   });
   return (
     <Card width="w-11/12">
-      <div>{services}</div>
+      <div className="flex flex-col justify-center align-middle text-center">
+        <p className="text-4xl pb-3 text-sky-500">სერვისები</p>
+
+      <div className="select-none">{services}</div>
+      </div>
     </Card>
   );
 };
