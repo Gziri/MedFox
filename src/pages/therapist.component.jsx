@@ -8,7 +8,7 @@ import Therapists from "../sections/therapists.section";
 const TherapistPage = () => (
   <div className="">
     <p>Therapist Page</p>
-    <div className="text-red-600">
+    <div >
       <Intro />
       <Therapists />
       <Offers />

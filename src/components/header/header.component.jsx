@@ -13,7 +13,9 @@ const Header = () => {
     >
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         {/* <div > */}
-        <Logo className="w-10 ml-10" />
+        <a href="/">
+          <Logo className="w-10 ml-10" />
+        </a>
         <Navigation />
         {/* </div> */}
       </div>
