@@ -6,10 +6,8 @@ import Offers from "../sections/offers.section";
 import Therapists from "../sections/therapists.section";
 
 const TherapistPage = () => (
-  <div className="">
-    <p>Therapist Page</p>
-    <div >
-      <Intro />
+  <div className="mt-32">
+    <div>
       <Therapists />
       <Offers />
       <CV />

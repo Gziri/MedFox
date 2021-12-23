@@ -11,13 +11,15 @@ const Header = () => {
       className=" w-full fixed top-0 left-0  px-2 py-3 mb-3
     bg-gray-100 z-50 shadow-lg"
     >
-      <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
-        {/* <div > */}
+      <div className="container px-4 mx-auto flex flex-col items-center justify-center">
+        {/* <span className="text-4xl">მედფოქსი</span> */}
+        <div className="w-full flex flex-wrap justify-between align-middle items-center">
         <a href="/">
           <Logo className="w-10 ml-10" />
         </a>
         <Navigation />
-        {/* </div> */}
+        </div>
+
       </div>
       {/* <div
         className={

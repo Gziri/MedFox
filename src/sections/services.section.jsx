@@ -4,7 +4,10 @@ import ReactHtmlParser from "react-html-parser";
 import Card from "../components/UI/card.component";
 import DATA from "./data";
 
+import * as servicePictures from '../assets/pics/servicePics/index'
+
 const Services = () => {
+  // Map all services' elements
   const services = DATA.services.map((service) => {
     if (service.side === "l") {
       return (
@@ -14,9 +17,9 @@ const Services = () => {
           key={service.key}
         >
           <img
-            src="https://physiomobile.ca/wp-content/uploads/2016/03/Pageservice2.jpg"
+            src={servicePictures[service.pictureName]}
             alt="serviceImage"
-            className="h-96 w-full object-cover laptop:h-full laptop:w-6/12 rounded-xl"
+            className="h-96 w-full object-cover laptop:h-full laptop:aspect-[7/12] laptop:w-6/12 rounded-xl"
           />
           <div className="laptop:pl-20 laptop:w-5/12 text-justify">
             <h1 className="text-center my-5 laptop:mb-15">
@@ -45,8 +48,8 @@ const Services = () => {
     } else {
       return (
         <div
-          className="flex flex-col-reverse  laptop:flex-row laptop:align-middle laptop:justify-center mb-5
-        "
+          className="flex flex-col-reverse  
+          laptop:flex-row laptop:align-middle laptop:justify-center mb-5"
           key={service.key}
         >
           <div className="laptop:pr-20 laptop:w-5/12 text-justify">
@@ -70,9 +73,9 @@ const Services = () => {
             </span>
           </div>
           <img
-            src="https://physiomobile.ca/wp-content/uploads/2016/03/Pageservice2.jpg"
+            src={servicePictures[service.pictureName]}
             alt="serviceImage"
-            className="h-96 w-full object-cover laptop:h-full laptop:w-6/12 rounded-xl"
+            className="h-96 w-full object-cover laptop:h-full laptop:aspect-[7/12] laptop:w-6/12 rounded-xl"
           />
         </div>
       );
@@ -80,10 +83,13 @@ const Services = () => {
   });
   return (
     <Card width="w-11/12">
-      <div className="flex flex-col justify-center align-middle text-center">
+      <div
+        className="flex flex-col justify-center align-middle text-center"
+        id="services"
+      >
         <p className="text-4xl pb-3 text-sky-500">სერვისები</p>
 
-      <div className="select-none">{services}</div>
+        <div className="select-none">{services}</div>
       </div>
     </Card>
   );
