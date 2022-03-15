@@ -9,13 +9,14 @@ const CV = () => (
     >
       <p className="text-4xl pb-4 text-sky-500">გამოგზავნე CV</p>
       <form
-        action="sendCV"
+        action="https://formsubmit.co/contact@medfox.ge"
+        method="POST"
         className="h-full w-10/12 laptop:w-6/12 flex flex-col  align-middle"
       >
         <input
           type="text"
-          id="name"
-          name="therapistName"
+          id="Therapist_Name"
+          name="Therapist_Name"
           className="border-2 rounded-lg w-full border-stone-500 border-opacity-50 outline-none 
             focus:border-orange-400 transition duration-200 my-2"
           placeholder="სახელი გვარი"
@@ -23,8 +24,8 @@ const CV = () => (
 
         <input
           type="number"
-          id="name"
-          name="therapistName"
+          id="Mobile_Phone"
+          name="Mobile_Phone"
           className="border-2 rounded-lg w-full border-stone-500 border-opacity-50 outline-none 
             focus:border-orange-400 transition duration-200 my-2"
           placeholder="ტელეფონი"
@@ -32,7 +33,7 @@ const CV = () => (
 
         <input
           type="file"
-          id="CV"
+          id="CVFile"
           name="CVFile"
           className="border-2 rounded-lg  w-full border-stone-500 border-opacity-50 outline-none 
             focus:border-orange-400 transition duration-200 file:bg-neutral-200 file:border-0 file:rounded file:py-2 my-2"

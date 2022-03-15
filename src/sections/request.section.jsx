@@ -10,13 +10,14 @@ const RequestService = () => (
     >
       <p className="text-4xl pb-4 text-sky-500">სერვისის მოთხოვნა</p>
       <form
-        action="sendCV"
+        action="https://formsubmit.co/contact@medfox.ge"
+        method="POST"
         className="h-full w-10/12 laptop:w-6/12 flex flex-col  align-middle"
       >
         <input
           type="text"
-          id="name"
-          name="therapistName"
+          id="Patient_Name"
+          name="Patient_Name"
           className="border-2 rounded-lg w-full border-stone-500 border-opacity-50 outline-none 
             focus:border-orange-400 transition duration-200 my-2"
           placeholder="სახელი გვარი"
@@ -24,29 +25,29 @@ const RequestService = () => (
 
         <input
           type="number"
-          id="name"
-          name="therapistName"
+          id="Phone_Number"
+          name="Phone_Number"
           className="border-2 rounded-lg w-full border-stone-500 border-opacity-50 outline-none 
             focus:border-orange-400 transition duration-200 my-2"
           placeholder="ტელეფონი"
         />
-          <select
-            type="select"
-            id="service"
-            name="therapistName"
-            className="border-2 rounded-lg w-full border-stone-500 border-opacity-50 outline-none 
+        <select
+          type="select"
+          id="Requested_Name"
+          name="Requested_Name"
+          className="border-2 rounded-lg w-full border-stone-500 border-opacity-50 outline-none 
             focus:border-orange-400 transition duration-200 my-2"
-            required
-          >
-            <option value="physical">ფიზიკური თერაპია</option>
-            <option value="massage">მასაჟი</option>
-            <option value="physio">ფიზიოთერაპია</option>
-            <option value="dist">დისტანციური სერვისები</option>
-          </select>
+          required
+        >
+          <option value="physical">ფიზიკური თერაპია</option>
+          <option value="massage">მასაჟი</option>
+          <option value="physio">ფიზიოთერაპია</option>
+          <option value="dist">დისტანციური სერვისები</option>
+        </select>
         <input
           type="text"
-          id="name"
-          name="therapistName"
+          id="Contact_At"
+          name="Contact_At"
           className="border-2 rounded-lg w-full border-stone-500 border-opacity-50 outline-none 
             focus:border-orange-400 transition duration-200 my-2"
           placeholder="როდის დაგიკავშირდეთ?"

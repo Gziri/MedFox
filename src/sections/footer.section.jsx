@@ -37,13 +37,13 @@ const Footer = () => (
       </div>
       <div className="w-full flex justify-center">
         <a
-          href="https://fb.com/MedFoxGE"
+          href="https://www.instagram.com/_med_fox_"
           target="_blank"
           rel="noreferrer"
           className="flex justify-center align-middle hover:text-orange-500"
         >
          <span className="iconify mr-3" data-icon="mdi:instagram" data-width="24"></span>
-          @medfoxge
+          @_med_fox_
         </a>
       </div>
     </div>

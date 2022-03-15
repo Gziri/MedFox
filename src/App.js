@@ -3,11 +3,15 @@ import PatientPage from "./pages/patient.component";
 import TherapistPage from "./pages/therapist.component";
 import Header from "./components/header/header.component";
 import backgroundVid from "./assets/videos/main.mp4";
+import { BrowserView, MobileView } from "react-device-detect";
+import Mobile from "./pages/mobile.component";
 
 import { Routes, Route } from "react-router";
 
 function App() {
   return (
+    <div>
+    <BrowserView>
     <div className="bg-neutral-200 bg-opacity-40 h-full w-screen flex flex-col font-geo">
       <Header />
       <video
@@ -22,7 +26,8 @@ function App() {
           height: "100%",
           objectFit: "cover",
           transform: "translate(-50%,-50%)",
-          "z-index":"-1"
+          "z-index":"-1",
+          muted: "true"
         }}
       >
         <source src={backgroundVid} type="video/mp4" />
@@ -32,6 +37,9 @@ function App() {
         <Route path="patient" element={<PatientPage />} />
         <Route path="therapist" element={<TherapistPage />} />
       </Routes>
+    </div>
+    </BrowserView>
+    <MobileView><Mobile/></MobileView>
     </div>
   );
 }

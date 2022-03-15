@@ -9,25 +9,26 @@ import * as Images from "../assets/pics/therapistPics";
  Add modal for therapist resume/extend parent div for text under
 */
 
-const Therapists = () => {
+const Therapists = (props) => {
   // const imagePath = require("../assets/pics/therapist.jpg");
   const therapists = DATA.therapists.map((t) => (
-    <div className="text-center mb-4 relative" key={t.key}>
-      <a
-        href="/"
-        className="flex justify-center"
-      >
-        <img
-          src={Images[t.imageName]}
-          alt="therapist"
-          className="
+    <div>
+      <div className="text-center mb-4 relative" key={t.key}>
+        <div onClick={() => props.therapist(t)} className="flex justify-center">
+          <img
+            src={Images[t.imageName]}
+            alt="therapist"
+            className="
           object-cover m-0 p-0 rounded-lg  float-right
           aspect-[1/1] w-52
           [clip-path:circle(40%_at_50%_40%)]
           [shape-outside:circle(40%_at_50%_40%)]"
-        />
-        <p className="hover:cursor-context-menu absolute top-44"> {t.name}</p>
-      </a>
+          />
+          <span className="hover:cursor-context-menu absolute top-44">
+            {t.name}
+          </span>
+        </div>
+      </div>
     </div>
   ));
   return (

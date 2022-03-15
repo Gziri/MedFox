@@ -1,18 +1,20 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import Intro from "../sections/intro.section";
 import Card from "../components/UI/card.component";
 
 const LandingPage = () => {
   const navigate = useNavigate();
+  const welcomeText = (
+    <div className="items-center w-full align-middle flex flex-col select-none">
+      <p className="text-xl ">
+        კეთილი იყოს თქვენი მობრძანება მედფოქსის ოფიციალურ გვერდზე
+      </p>
+      <p className="font-bold">თქვენი ჯანმრთელობა ჩვენი პრიორიტეტია</p>
+    </div>
+  );
   return (
-    <div className="h-screen flex flex-col justify-center items-center">
-     
-      <div className="mt-30 w-full">
-        <Card opacity="0.9">
-          <Intro />
-        </Card>
-      </div>
+    <div className="h-screen flex flex-col justify-center items-center align-middle">
+      <Card opacity={0.8}>{welcomeText}</Card>
       <br />
       <p className="mb-3">მე ვარ</p>
       <div className="flex gap-10   ">
